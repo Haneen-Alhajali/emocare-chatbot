@@ -1,0 +1,106 @@
+/*--------------------------------------------------------------
+# Pricing Section
+--------------------------------------------------------------*/
+.pricing .pricing-tem {
+    background-color: var(--surface-color);
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    height: 100%;
+  }
+  
+  @media (min-width: 1200px) {
+    .pricing .pricing-tem:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .pricing h3 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .pricing .price {
+    font-size: 36px;
+    color: var(--heading-color);
+    font-weight: 600;
+    font-family: var(--heading-font);
+  }
+  
+  .pricing .price sup {
+    font-size: 20px;
+    top: -15px;
+    left: -3px;
+  }
+  
+  .pricing .price span {
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    font-size: 16px;
+    font-weight: 300;
+  }
+  
+  .pricing .icon {
+    padding: 20px 0;
+  }
+  
+  .pricing .icon i {
+    font-size: 48px;
+  }
+  
+  .pricing ul {
+    padding: 0;
+    list-style: none;
+    color: var(--default-color);
+    text-align: center;
+    line-height: 26px;
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  
+  .pricing ul li {
+    padding-bottom: 10px;
+  }
+  
+  .pricing ul .na {
+    color: color-mix(in srgb, var(--default-color), transparent 70%);
+    text-decoration: line-through;
+  }
+  
+  .pricing .btn-buy {
+    display: inline-block;
+    padding: 8px 40px 10px 40px;
+    border-radius: 50px;
+    color: var(--accent-color);
+    transition: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    transition: 0.3s;
+    border: 1px solid var(--accent-color);
+  }
+  
+  .pricing .btn-buy:hover {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+  }
+  
+  .pricing .featured {
+    width: 200px;
+    position: absolute;
+    top: 18px;
+    right: -68px;
+    transform: rotate(45deg);
+    z-index: 1;
+    font-size: 14px;
+    padding: 1px 0 3px 0;
+    background: var(--accent-color);
+    color: var(--contrast-color);
+  }
+  

@@ -1,0 +1,203 @@
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 20px 0;
+    transition: all 0.5s;
+    z-index: 997;
+  }
+  
+  .header .logo {
+    line-height: 1;
+  }
+  
+  .header .logo img {
+    max-height: 50px;
+    margin-right: 8px;
+  }
+  
+  .header .logo h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+  
+  .header .btn-getstarted,
+  .header .btn-getstarted:focus {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    font-size: 15px;
+    padding: 8px 25px;
+    margin: 0 0 0 30px;
+    border-radius: 4px;
+    transition: 0.3s;
+    font-weight: 500;
+  }
+  
+  .header .btn-getstarted:hover,
+  .header .btn-getstarted:focus:hover {
+    color: var(--contrast-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  }
+  
+  @media (max-width: 1200px) {
+    .header .logo {
+      order: 1;
+    }
+  
+    .header .btn-getstarted {
+      order: 2;
+      margin: 0 15px 0 0;
+      padding: 6px 15px;
+    }
+  
+    .header .navmenu {
+      order: 3;
+    }
+  }
+
+
+  
+  /* Index Page Header
+  ------------------------------*/
+  .index-page .header {
+    --background-color: rgba(255, 255, 255, 0);
+  }
+  
+  /* Index Page Header on Scroll
+  ------------------------------*/
+  .index-page.scrolled .header {
+    --background-color: #ffffff;
+    box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  /* Navmenu - Desktop */
+  @media (min-width: 1200px) {
+    .navmenu {
+      padding: 0;
+    }
+  
+    .navmenu ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+  
+    .navmenu li {
+      position: relative;
+    }
+  
+    .navmenu a,
+    .navmenu a:focus {
+      color: var(--nav-color);
+      padding: 18px 12px;
+      font-size: 15px;
+      font-family: var(--nav-font);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      white-space: nowrap;
+      transition: 0.3s;
+    }
+  
+    .navmenu li:last-child a {
+      padding-right: 0;
+    }
+  
+    .navmenu li:hover>a,
+    .navmenu .active,
+    .navmenu .active:focus {
+      color: var(--nav-hover-color);
+    }
+  }
+  
+  /* Navmenu - Mobile */
+  @media (max-width: 1199px) {
+    .mobile-nav-toggle {
+      color: var(--nav-color);
+      font-size: 28px;
+      line-height: 0;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+  
+    .navmenu {
+      padding: 0;
+      z-index: 9997;
+    }
+  
+    .navmenu ul {
+      display: none;
+      list-style: none;
+      position: absolute;
+      inset: 60px 20px 20px 20px;
+      padding: 10px 0;
+      margin: 0;
+      border-radius: 6px;
+      background-color: var(--nav-mobile-background-color);
+      overflow-y: auto;
+      transition: 0.3s;
+      z-index: 9998;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    }
+  
+    .navmenu a,
+    .navmenu a:focus {
+      color: var(--nav-dropdown-color);
+      padding: 10px 20px;
+      font-family: var(--nav-font);
+      font-size: 17px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      white-space: nowrap;
+      transition: 0.3s;
+    }
+  
+    .navmenu a:hover,
+    .navmenu .active,
+    .navmenu .active:focus {
+      color: var(--nav-dropdown-hover-color);
+    }
+  
+    .mobile-nav-active {
+      overflow: hidden;
+    }
+  
+    .mobile-nav-active .mobile-nav-toggle {
+      color: #fff;
+      position: absolute;
+      font-size: 32px;
+      top: 15px;
+      right: 15px;
+      margin-right: 0;
+      z-index: 9999;
+    }
+  
+    .mobile-nav-active .navmenu {
+      position: fixed;
+      overflow: hidden;
+      inset: 0;
+      background: rgba(33, 37, 41, 0.8);
+      transition: 0.3s;
+    }
+  
+    .mobile-nav-active .navmenu>ul {
+      display: block;
+    }
+  
+  }
+  

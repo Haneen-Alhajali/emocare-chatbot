@@ -1,0 +1,59 @@
+{
+  "name": "emocare-chatbot",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.12.4",
+    "@emailjs/browser": "^4.4.1",
+    "@react-google-maps/api": "^2.20.5",
+    "aos": "^2.3.4",
+    "apollo-server": "^3.13.0",
+    "apollo-server-express": "^3.13.0",
+    "chart.js": "^4.4.7",
+    "cors": "^2.8.5",
+    "cra-template": "1.2.0",
+    "emailjs-com": "^3.2.0",
+    "ev-emitter": "^2.1.2",
+    "express": "^4.21.2",
+    "express-graphql": "^0.12.0",
+    "fs": "^0.0.1-security",
+    "glightbox": "^3.3.1",
+    "graphql": "^15.9.0",
+    "jquery": "^3.7.1",
+    "mysql2": "^3.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.1.1",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^4.2.4",
+    "ws": "^8.18.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-private-property-in-object": "^7.25.9"
+  }
+}

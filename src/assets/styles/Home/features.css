@@ -1,0 +1,32 @@
+/*--------------------------------------------------------------
+# Features Section
+--------------------------------------------------------------*/
+.features .feature-box {
+    padding: 24px 20px;
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    height: 100%;
+  }
+  
+  .features .feature-box h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .features .feature-box i {
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+    color: var(--accent-color);
+    line-height: 0;
+    padding: 4px;
+    margin-right: 10px;
+    font-size: 24px;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+  
+  .features .feature-box:hover i {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+  }
+  
