@@ -1,43 +1,24 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "../../assets/styles/auth.css";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import AuthForm from "../../components/AuthForm";
 
 const Signup = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Simulate signup logic
+  const handleSignup = (email, password) => {
     console.log("Signing up with:", email, password);
-    navigate("/chat"); // Redirect to chat after signup
+    navigate("/chat");
   };
 
   return (
-    <div className="auth-container">
-      <h2>Sign Up</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Sign Up</button>
-      </form>
-      <p>
-        Already have an account? <Link to="/login">Log In</Link>
-      </p>
-    </div>
+    <AuthForm
+      title="Create an Account"
+      buttonText="Sign Up"
+      onSubmit={handleSignup}
+      linkText="Already have an account?"
+      linkTo="/login"
+      linkAction="Log In"
+    />
   );
 };
 

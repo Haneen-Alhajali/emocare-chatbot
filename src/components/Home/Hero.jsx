@@ -19,7 +19,7 @@ const Hero = () => {
               data-aos="fade-up"
               data-aos-delay={200}
             >
-              <a href="#about" className="btn-get-started">
+              <a href="/login" className="btn-get-started">
                 Get Started <i className="bi bi-arrow-right" />
               </a>
               <a

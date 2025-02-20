@@ -6,7 +6,7 @@
   /*--------------------------------------------------------------
   # General Styling & Shared Classes
   --------------------------------------------------------------*/
-  body {
+  .home {
     color: var(--default-color);
     background-color: var(--background-color);
     font-family: var(--default-font);

@@ -1,0 +1,285 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(135deg, #f0f4f8, #dfe6ed); /* Lighter gradient background */
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 0 40px 40px 0;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Ensure sidebar content is stacked vertically */
+}
+
+.sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+/* Toggle Button */
+.toggle-sidebar {
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 1001;
+    transition: left 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-sidebar:hover {
+    background-color: var(--heading-color);
+}
+
+/* Move toggle button when sidebar is expanded */
+.sidebar:not(.collapsed) + .toggle-sidebar {
+    left: calc(280px + 10px); /* Adjust dynamically */
+}
+
+/* Sidebar Top Section */
+.sidebar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Chat History */
+.one-his {
+    margin-bottom: 15px;
+}
+
+.one-his p {
+    color: var(--heading-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: var(--heading-color);
+}
+
+.search:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar Bottom Section */
+.sidebar-bootom {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+/* Buttons */
+.sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.sidebar-button {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-button:hover {
+    background-color: var(--heading-color);
+}
+
+/* Upgrade Button */
+.upgrade-button {
+    background: linear-gradient(135deg, #e9aa3e, #ecb95f);
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.upgrade-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* User Profile Section */
+.second.bottom-first {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.second.bottom-first .upgrade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.second.bottom-first .g {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.second.bottom-first p {
+    color: var(--heading-color);
+    font-weight: 500;
+}
+
+.second.bottom-first .bi-three-dots {
+    color: var(--heading-color);
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.second.bottom-first .bi-three-dots:hover {
+    transform: scale(1.1);
+}
+
+/* New Chat Button */
+.new-chat {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.new-chat:hover {
+    background-color: var(--heading-color);
+    transform: translateY(-2px);
+}
+
+/* Slider Content */
+.slider-content {
+    margin-top: 20px;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    max-height: 60vh;
+    min-height: 200px; /* Ensure slider has a minimum height */
+    padding: 10px;
+    border-radius: 10px;
+margin-bottom: 20px;
+}
+
+/* Custom Scrollbar */
+.slider-content::-webkit-scrollbar {
+    width: 6px; /* Minimize scrollbar width */
+}
+
+.slider-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Light track color */
+    border-radius: 10px;
+}
+
+.slider-content::-webkit-scrollbar-thumb {
+    background: var(--accent-color); /* Use accent color for the scrollbar thumb */
+    border-radius: 10px;
+}
+
+.slider-content::-webkit-scrollbar-thumb:hover {
+    background: var(--heading-color); /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .toggle-sidebar {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .sidebar:not(.collapsed) + .toggle-sidebar {
+        left: calc(220px + 10px);
+    }
+
+    .sidebar .sidebar-button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .sidebar .one-his p,
+    .sidebar .search p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .toggle-sidebar {
+        left: 10px;
+    }
+
+    .sidebar:not(.collapsed) + .toggle-sidebar {
+        left: calc(200px + 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .toggle-sidebar {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .sidebar:not(.collapsed) + .toggle-sidebar {
+        left: calc(180px + 10px);
+    }
+}

@@ -1,9 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-// import Login from "./pages/Auth/Login";
-// import Signup from "./pages/Auth/Signup";
-// import ChatWindow from "./components/ChatWindow";
+import ComingSoon from "./pages/ComingSoon";
+import Login from "./pages/Auth/Login";
+import Signup from "./pages/Auth/Signup";
+import Chatbot from "./pages/Chatbot";
 // import "./assets/styles/animations.css";
 import "./assets/styles/globals.css";
 
@@ -28,9 +29,15 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/chat" element={<ChatWindow />} /> */}
+        <Route path="/chat" element={<Chatbot />} />
+
+        {/* Routes for Coming Soon Pages */}
+        <Route path="/doctor-chat" element={<ComingSoon />} />
+        <Route path="/mood-tracker" element={<ComingSoon />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
+        
       </Routes>
     </Router>
   );

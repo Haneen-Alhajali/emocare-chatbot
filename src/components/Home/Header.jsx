@@ -35,7 +35,7 @@ const Header = () => {
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list" />
         </nav>
-        <a className="btn-getstarted flex-md-shrink-0" href="index.html#about">
+        <a className="btn-getstarted flex-md-shrink-0" href="/login">
           Get Started
         </a>
       </div>
