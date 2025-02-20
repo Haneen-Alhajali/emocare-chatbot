@@ -12,12 +12,13 @@ const Login = () => {
 
   return (
     <AuthForm
-      title="Welcome Back!"
+      title="😊 Welcome Back"
       buttonText="Log In"
       onSubmit={handleLogin}
       linkText="Don't have an account?"
       linkTo="/signup"
-      linkAction="Sign Up"
+      linkAction={() => navigate("/signup")}
+      linkLabel="Sign Up"
     />
   );
 };

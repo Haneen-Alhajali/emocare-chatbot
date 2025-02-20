@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import '../assets/styles/auth.css';
 
-const AuthForm = ({ title, buttonText, onSubmit, linkText, linkTo, linkAction }) => {
+const AuthForm = ({ title, buttonText, onSubmit, linkText, linkTo, linkAction, linkLabel }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -9,7 +9,7 @@ const AuthForm = ({ title, buttonText, onSubmit, linkText, linkTo, linkAction })
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!email.includes("@") || password.length < 6) {
-      setError("Invalid email or password (min 6 characters)");
+      setError("Invalid email or password (minimum 6 characters)");
       return;
     }
     setError("");
@@ -40,9 +40,19 @@ const AuthForm = ({ title, buttonText, onSubmit, linkText, linkTo, linkAction })
           {error && <p className="error-message">{error}</p>}
           <button className="auth-button" type="submit">{buttonText}</button>
         </form>
-        <p  className="auth-p"
-        >
-          {linkText} <a href={linkTo}>{linkAction}</a>
+        <p className="auth-p">
+          {linkText}{" "}
+          <a
+            href={linkTo}
+            onClick={(e) => {
+              e.preventDefault();
+              if (typeof linkAction === "function") {
+                linkAction();
+              }
+            }}
+          >
+            {linkLabel || "Click Here"}
+          </a>
         </p>
       </div>
     </div>
