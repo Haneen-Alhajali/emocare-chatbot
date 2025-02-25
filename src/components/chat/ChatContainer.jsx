@@ -9,7 +9,6 @@ const ChatContainer = () => {
   const handleVoiceInput = () => {
     setIsListening((prev) => !prev);
   };
-
   const handleSend = () => {
     if (input.trim()) {
       const userMessage = { text: input, sender: "user" };
@@ -37,6 +36,15 @@ const ChatContainer = () => {
   return (
     <div className="chat-container">
       <div className="container-content">
+        {/* Logout and Back to Home Buttons */}
+        <div className="chat-header-buttons">
+          <a href="/" className="back-to-home-button">
+            <i className="bi bi-house"></i> Back to Home
+          </a>
+          <a href="/login" className="logout-button">
+            <i className="bi bi-box-arrow-right"></i> Logout
+          </a>
+        </div>
         <h1>EmoCare Chatbot</h1>
 
         {messages.length === 0 ? (

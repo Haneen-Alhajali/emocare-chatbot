@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header id="header" className="header d-flex align-items-center fixed-top">
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
-        <a href="index.html" className="logo d-flex align-items-center me-auto">
+        <a href="/" className="logo d-flex align-items-center me-auto">
           <img src="/assets/img/emocare-logo.png" alt="EmoCare Logo" />
           <h1 className="sitename">EmoCare</h1>
         </a>

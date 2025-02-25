@@ -1,9 +1,23 @@
 import React from "react";
 import "../assets/styles/ComingSoon.css";
 
+
 const ComingSoon = () => {
+    // Function to handle the "Back" button click
+    const handleGoBack = () => {
+      window.history.back(); // Navigate to the previous page in the browser history
+    };
   return (
     <div className="coming-soon">
+      {/* Back and Home Buttons */}
+      <div className="navigation-buttons">
+        <button className="nav-button" onClick={handleGoBack}>
+          <i className="bi bi-arrow-left"></i> Back
+        </button>
+        <a className="nav-button" href="/">
+          <i className="bi bi-house"></i> Home
+        </a>
+      </div>
       <main className="comming-content">
         <div className="container">
           <div className="row">
