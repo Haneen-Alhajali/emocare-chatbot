@@ -13,7 +13,7 @@ Welcome to the **frontend repository** of **EmoCare**, an AI-powered mental heal
 4. [🚀 Getting Started](#-getting-started)
 5. [🎨 Design Highlights](#-design-highlights)
 6. [🧩 Components Overview](#-components-overview)
-8. [🤝 Contributing](#-contributing)
+8. [📄 Documentation](#-documentation).
 10. [🙏 Acknowledgments](#-acknowledgments)
 
 
@@ -98,6 +98,19 @@ Here’s a quick demo of the website in action:
 - **Contact**: A form for users to send inquiries or feedback.
 
 ---
+
+## 📄 Documentation
+
+Check out the project documents for more details:  
+
+- **📊 [EmoCare Business Model Canvas](emocare-docs/EmoCareBusinessModelCanvas.pdf)**  
+  Overview of the business model and key strategies for EmoCare.  
+
+- **🎤 [EmoCare Presentation](emocare-docs/EmoCarePresentation.pdf)**  
+  A detailed presentation showcasing features, design, and future roadmap.
+
+---
+
 
 ## 🙏 Acknowledgments
 
